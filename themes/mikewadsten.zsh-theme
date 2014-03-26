@@ -58,8 +58,8 @@ FMT_ACTION="(%{$limegreen%}%a${PR_RST})"
 FMT_UNSTAGED="%{$orange%}●"
 FMT_STAGED="%{$limegreen%}●"
 
-zstyle ':vcs_info:*:prompt:*' unstagedstr   "${FMT_UNSTAGED}"
-zstyle ':vcs_info:*:prompt:*' stagedstr     "${FMT_STAGED}"
+zstyle ':vcs_info:*:prompt:*' unstagedstr   " ${FMT_UNSTAGED}"
+zstyle ':vcs_info:*:prompt:*' stagedstr     " ${FMT_STAGED}"
 zstyle ':vcs_info:*:prompt:*' actionformats "${FMT_BRANCH}${FMT_ACTION}"
 zstyle ':vcs_info:*:prompt:*' formats       "${FMT_BRANCH}"
 zstyle ':vcs_info:*:prompt:*' nvcsformats   ""
@@ -111,7 +111,7 @@ function +vi-git-st() {
     (( $behind )) && gitstatus+=( "-${behind}" )
 
     # Only add ahead/behind if there's anything to add...
-    [[ -n "${gitstatus}" ]] && hook_com[branch]+=" ${(j:/:)gitstatus} "
+    [[ -n "${gitstatus}" ]] && hook_com[branch]+=" ${(j:/:)gitstatus}"
 }
 
 PROMPT=$'
