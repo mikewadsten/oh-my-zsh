@@ -32,3 +32,9 @@ function extract() {
         echo "'$1' is not a valid file"
     fi
 }
+
+command -v mvim >&/dev/null
+if [ $? -eq 0 ]; then
+    # twitter.com/Fandekasp/status/31999263424643072
+    alias vim='mvim -v'
+fi
