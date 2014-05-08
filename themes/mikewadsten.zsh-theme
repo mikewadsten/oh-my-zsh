@@ -115,6 +115,6 @@ function +vi-git-st() {
 }
 
 PROMPT=$'
-%{$purple%}%n%{$reset_color%} at %{$orange%}%m%{$reset_color%} in %{$limegreen%}%~%{$reset_color%} $vcs_info_msg_0_$(virtualenv_info)%{$reset_color%}
+%{$purple%}%n%{$reset_color%} at %B%{$orange%}%m%{$reset_color%}%b in %{$limegreen%}%~%{$reset_color%} $vcs_info_msg_0_$(virtualenv_info)%{$reset_color%}
 $ '
 
