@@ -33,6 +33,8 @@ cmds=(
         -s
     1:d
         detach-client
+    :ls
+        list-sessions
     :n
         new-session
 )
